@@ -1,0 +1,25 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsx site/build.ts",
+    "typecheck": "tsc --noEmit && tsc -p mcp --noEmit",
+    "mcp:dev": "wrangler dev -c mcp/wrangler.toml",
+    "mcp:deploy": "wrangler deploy -c mcp/wrangler.toml"
+  },
+  "description": "Personal recipe site fed by an MCP server",
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "agents": "^0.26.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.86.0"
+  },
+  "private": true,
+  "type": "module"
+}

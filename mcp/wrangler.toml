@@ -1,0 +1,13 @@
+name = "recipes-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+GITHUB_REPO = "peteresculley/recipes"
+GITHUB_BRANCH = "main"
+SITE_URL = "https://peteresculley.github.io/recipes"
+
+# Secrets (set with `npx wrangler secret put <NAME> -c mcp/wrangler.toml`, or mcp/.dev.vars locally):
+#   GITHUB_TOKEN     fine-grained PAT: this repo only, Contents read/write
+#   MCP_PATH_SECRET  32+ random chars; the endpoint is /mcp/<MCP_PATH_SECRET>
